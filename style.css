@@ -1,22 +1,38 @@
 
      body{
-      background-color: lightpink;
+      background-color: rgb(131, 171, 112);
      }
 p {
      color: black;
      font-size: 20px;
+     font-family: "IBM Plex Serif", sans-serif;
 }
 
 #title {
-     font-size: 100px;
-     color: black;
+     font-family: "Snowburst One", system-ui;
+     font-size: 70px;
+     color: rgb(147, 31, 149);
      font-weight: bold;
 }
     
-.archivo-black-regular {
-  font-family: "Archivo Black", sans-serif;
+.ibm-plex-serif-regular {
+  font-family: "IBM Plex Serif", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.snowburst {
+  font-family: "Snowburst One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+     font-family: "Snowburst One", system-ui;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 50px;
+      color: rgb(147, 31, 149);
 }
 
 
