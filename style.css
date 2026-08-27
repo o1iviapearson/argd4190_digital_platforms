@@ -1,6 +1,6 @@
 
      body{
-      background-color: rgb(131, 171, 112);
+      background-color: rgb(220, 216, 197);
      }
 p {
      color: black;
@@ -9,10 +9,11 @@ p {
 }
 
 #title {
-     font-family: "Snowburst One", system-ui;
-     font-size: 70px;
-     color: rgb(147, 31, 149);
+     font-family: "Rubik Vinyl", system-ui;
+     color: black;
      font-weight: bold;
+     text-align: center;
+     font-size: 200px;
 }
     
 .ibm-plex-serif-regular {
@@ -21,14 +22,9 @@ p {
   font-style: normal;
 }
 
-.snowburst {
-  font-family: "Snowburst One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
 
 h1 {
-     font-family: "Snowburst One", system-ui;
+     font-family: "Rubik Vinyl", system-ui;
      font-weight: 400;
      font-style: normal;
      font-size: 50px;
@@ -36,3 +32,58 @@ h1 {
 }
 
 
+.rubik-vinyl-regular {
+  font-family: "Rubik Vinyl", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.title-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+
+.portfolio-title {
+    position: relative;
+    margin-top: 100px;
+}
+
+.name {
+    position: absolute;
+    top: 20px;
+    left: 158px;
+    font-family: "Barriecito", system-ui;
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+.Flower {
+    width: 1000px;
+    height: auto;
+     position: absolute;
+    top: 130px;
+    left: 170px;
+}
