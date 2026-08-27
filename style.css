@@ -67,7 +67,9 @@ nav {
     z-index: 10;
 }
 
-
+.Flower {
+    z-index: -1;
+}
 
 .portfolio-title {
     position: relative;
@@ -89,5 +91,4 @@ nav {
      position: absolute;
     top: 130px;
     left: 170px;
-    pointer-events: none;
 }
