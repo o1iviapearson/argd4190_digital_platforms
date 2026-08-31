@@ -9,11 +9,7 @@ p {
 }
 
 #title {
-     font-family: "Rubik Vinyl", system-ui;
-     color: black;
-     font-weight: bold;
-     text-align: center;
-     font-size: 200px;
+
 }
     
 .ibm-plex-serif-regular {
@@ -24,11 +20,17 @@ p {
 
 
 h1 {
-     font-family: "Rubik Vinyl", system-ui;
+     /* font-family: "Rubik Vinyl", system-ui;
      font-weight: 400;
      font-style: normal;
      font-size: 50px;
       color: rgb(147, 31, 149);
+       */
+            font-family: "Rubik Vinyl", system-ui;
+     color: black;
+     font-weight: bold;
+     text-align: center;
+     font-size: 200px;
 }
 
 
@@ -91,4 +93,24 @@ nav {
      position: absolute;
     top: 130px;
     left: 170px;
+}
+
+.home-button {
+    display: inline-block;
+
+    font-family: "Barriecito", system-ui;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+
+    color: black;
+
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
 }
