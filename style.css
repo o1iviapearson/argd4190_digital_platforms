@@ -1,11 +1,17 @@
-
-     body{
-      background-color: rgb(220, 216, 197);
-     }
+:root {
+  --font-family: "IBM Plex Serif", sans-serif;
+  --bg-color: rgb(220, 216, 197);
+  --text-color: black;
+}
+    
+    
+body{
+      background-color: var(--bg-color);
+}
 p {
-     color: black;
-     font-size: 20px;
-     font-family: "IBM Plex Serif", sans-serif;
+     color: var(--text-color);
+     font-size: var(--font-size);
+     font-family: var(--font-family);
 }
 
 .ibm-plex-serif-regular {
@@ -29,6 +35,14 @@ h1 {
      font-size: 200px;
 }
 
+h2 {
+    font-family: "Barriecito", system-ui;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 0px;
+}
 
 .rubik-vinyl-regular {
   font-family: "Rubik Vinyl", system-ui;
@@ -36,8 +50,8 @@ h1 {
   font-style: normal;
 }
 
-.logo {
-    width: 200px;
+.Monogram {
+    width: 100px;
     height: auto;
 }
 
@@ -125,7 +139,7 @@ nav {
 .description {
     width: 45%;
 
-    border: 2px solid black;
+    border: 4px solid black;
     border-radius: 20px;
 
     padding: 25px;
@@ -147,13 +161,15 @@ nav {
 }
 
 .Monogram {
-     width: 200px;
+     width: 100px;
      max-width: 100%;
 }
 
 .Headshot {
      width: 400px;
      max-width: 100%;
+     border: 4px solid black;
+     border-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -182,4 +198,88 @@ nav {
 
 .home-button-container {
     text-align: center;
+}
+
+
+/* Responsive */
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    #title {
+        font-size: 120px;
+    }
+
+    .Flower {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+
+    #title {
+        font-size: 70px;
+    }
+
+    .name {
+        font-size: 20px;
+        position: static;
+        text-align: center;
+    }
+
+    .portfolio-title {
+        margin-top: 50px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Flower {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    gap: 50px;
+}
+
+.about-container p {
+    width: 50%;
+}
+
+.Headshot {
+    width: 400px;
+    max-width: 40%;
+    height: auto;
+}
+
+
+.carousel {
+    display: flex;
+
+    width: 400px;
+    max-width: 100%;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel img {
+    width: 100%;
+    flex: 0 0 100%;
+    height: auto;
+
+    scroll-snap-align: center;
 }
