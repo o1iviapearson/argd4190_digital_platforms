@@ -100,17 +100,50 @@ nav {
     letter-spacing: 0px;
 }
 
+.projects {
+    margin: 40px;
+}
 
-.container {
-    justify-content: space-between;
+.project {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
 
-    border: 1px solid black;
+    margin-bottom: 80px;
+}
+
+.project-image {
+    width: 45%;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.description {
+    width: 45%;
+
+    border: 2px solid black;
     border-radius: 20px;
 
-    margin: 30px;
-    padding: 20px;
+    padding: 25px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.monogram-project {
+    text-align: left;
+}
+
+.monogram-project h2 {
+    font-family: "Barriecito", system-ui;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .Monogram {
