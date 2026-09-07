@@ -236,18 +236,22 @@ nav {
 
 /* Phone */
 @media (max-width: 600px) {
+
     #title {
         font-size: 70px;
     }
 
     .portfolio-title {
+        position: relative;
         margin-top: 50px;
     }
 
     .name {
-        top: 5px;
-        left: 90px;
+        position: absolute;
+        top: -8px;
+        left: 30%;
         font-size: 16px;
+        white-space: nowrap;
     }
 
     nav {
@@ -257,7 +261,6 @@ nav {
 
     .Flower {
         width: 95%;
-        top: 130px;
     }
 }
 
