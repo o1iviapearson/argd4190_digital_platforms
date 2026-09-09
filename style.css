@@ -33,7 +33,7 @@ h1 {
      color: black;
      font-weight: bold;
      text-align: center;
-     font-size: 200px;
+     font-size: clamp(56px, 12vw, 200px);
 }
 
 h2 {
@@ -93,12 +93,17 @@ nav {
 .portfolio-title {
     position: relative;
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .name {
-    position: absolute;
-    top: 25px;
-    left: 160px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    text-align: left;
 
     font-family: "Barriecito", system-ui;
     font-size: 30px;
@@ -189,6 +194,133 @@ nav {
 
 }
 
+@media (max-width: 900px) {
+    #title {
+        font-size: 120px;
+    }
+
+    .name {
+        top: 10px;
+        left: 160px;
+        font-size: 22px;
+    }
+
+    .Flower {
+        width: 80%;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-container p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .Headshot {
+        max-width: 100%;
+        width: 320px;
+    }
+
+    .project {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-image,
+    .description {
+        width: 100%;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .portfolio-title {
+        position: relative;
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #title {
+        font-size: 44px;
+        line-height: 0.95;
+        letter-spacing: 3px;
+        word-break: normal;
+        text-align: center;
+    }
+
+    .name {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        font-size: 16px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Flower {
+        width: 95%;
+        top: 90px;
+        left: calc(50% + 20px);
+        transform: translateX(-50%);
+    }
+
+    .projects {
+        margin: 20px;
+    }
+
+    .project {
+        margin-bottom: 40px;
+    }
+
+    .description {
+        padding: 16px;
+    }
+
+    .page-title {
+        font-size: 50px;
+    }
+
+    .about-container {
+        margin: 20px;
+        gap: 20px;
+    }
+
+    .about-container p {
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
 .home-button {
     display: inline-block;
 
@@ -214,57 +346,6 @@ nav {
 }
 
 
-/* Responsive */
-
-
-/* Tablet */
-@media (max-width: 900px) {
-    #title {
-        font-size: 120px;
-    }
-
-    .name {
-        top: 10px;
-        left: 160px;
-        font-size: 22px;
-    }
-
-    .Flower {
-        width: 80%;
-    }
-}
-
-/* Phone */
-@media (max-width: 600px) {
-
-    #title {
-        font-size: 70px;
-    }
-
-    .portfolio-title {
-        position: relative;
-        margin-top: 50px;
-    }
-
-    .name {
-        position: absolute;
-        top: -8px;
-        left: 30%;
-        font-size: 16px;
-        white-space: nowrap;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .Flower {
-        width: 95%;
-    }
-}
-
-
 .about-container {
     display: flex;
     justify-content: space-between;
@@ -275,6 +356,11 @@ nav {
 
 .about-container p {
     width: 50%;
+    text-align: left;
+}
+
+.about-text {
+    text-align: left;
 }
 
 .Headshot {
