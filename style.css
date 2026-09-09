@@ -321,7 +321,8 @@ nav {
     }
 }
 
-.home-button {
+.home-button,
+.linkedin-button {
     display: inline-block;
 
     font-family: "Barriecito", system-ui;
@@ -343,6 +344,10 @@ nav {
 
 .home-button-container {
     text-align: center;
+}
+
+.linkedin-button {
+    margin-top: 10px;
 }
 
 
