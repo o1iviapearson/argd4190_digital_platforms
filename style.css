@@ -1,407 +1,1145 @@
-:root {
-    --font-family: "IBM Plex Serif", sans-serif;
-    --bg-color: rgb(220, 216, 197);
-    --text-color: black;
-    --font-size: 20px;
-}
-    
-    
-body{
-      background-color: var(--bg-color);
-}
-p {
-     color: var(--text-color);
-     font-size: var(--font-size);
-     font-family: var(--font-family);
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+* {
+    box-sizing: border-box;
 }
 
-.ibm-plex-serif-regular {
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 400;
-  font-style: normal;
+html {
+    scroll-behavior: smooth;
 }
 
-
-h1 {
-     /* font-family: "Rubik Vinyl", system-ui;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 50px;
-      color: rgb(147, 31, 149);
-       */
-            font-family: "Rubik Vinyl", system-ui;
-     color: black;
-     font-weight: bold;
-     text-align: center;
-     font-size: clamp(56px, 12vw, 200px);
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1ec;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
-h2 {
-    font-family: "Barriecito", system-ui;
-    font-size: 35px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: 0px;
+h1, h2, h3, p {
+    margin-top: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
 
-.rubik-vinyl-regular {
-  font-family: "Rubik Vinyl", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
+/* ========================================
+   UNIVERSAL NAVIGATION
+======================================== */
 
-.Monogram {
-    width: 100px;
-    height: auto;
-}
-
-.title-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav a {
-    font-family: "Barriecito", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    padding: 8px 18px;
-    border-radius: 20px;
-}
-
-nav {
-    display: flex;
-    gap: 15px;
-    position: relative;
-    z-index: 10;
-}
-
-.Flower {
-    z-index: -1;
-}
-
-.portfolio-title {
-    position: relative;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.name {
-    position: relative;
+.site-nav {
+    position: fixed;
     top: 0;
     left: 0;
-    margin: 0;
-    text-align: left;
+    width: 100%;
+    height: 80px;
 
-    font-family: "Barriecito", system-ui;
-    font-size: 30px;
-    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+    background-color: #f4f1ec;
+    border-bottom: 1px solid #111;
+    z-index: 100;
 }
 
-.Flower {
-    width: 80%;
-    max-width: 1000px;
-    height: auto;
-
-    position: absolute;
-    top: 130px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    z-index: -1;
-}
-
-
-.page-title {
-    font-family: "Rubik Vinyl", system-ui;
-    font-size: 80px;
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: 0px;
-}
-
-.projects {
-    margin: 40px;
-}
-
-.project {
+.nav-logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-
-    margin-bottom: 80px;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.project-image {
-    width: 45%;
+.nav-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.project-image img {
+.nav-logo:hover img {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+/* ========================================
+   HOMEPAGE HERO
+======================================== */
+
+.hero {
+    position: relative;
     width: 100%;
-    max-width: 400px;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
 }
+
+.hero-intro {
+    position: absolute;
+    top: 125px;
+    left: 40px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.hero-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* INTERACTIVE OLIVIA PEARSON TITLE */
+
+
+/* ========================================
+   BIG INTERACTIVE HOMEPAGE TITLE
+======================================== */
+
+.hero-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0;
+    padding: 0 2vw;
+
+    font-family: "Rubik 80s Fade", system-ui;
+
+    /* BIGGER TITLE */
+    font-size: clamp(55px, 10vw, 180px);
+
+    font-weight: 400;
+    line-height: 1.3;
+
+    white-space: nowrap;
+    cursor: crosshair;
+}
+
+.hero-title .letter {
+    display: inline-block;
+    transform-origin: center bottom;
+    transition: transform 0.12s ease-out;
+    will-change: transform;
+}
+
+.hero-title .space {
+    display: inline-block;
+    width: 0.28em;
+    flex-shrink: 0;
+}
+
+
+.hero-title .letter {
+    display: inline-block;
+    transform-origin: center bottom;
+    transition: transform 0.12s ease-out;
+    will-change: transform;
+}
+
+.hero-title .space {
+    display: inline-block;
+    width: 0.28em;
+    flex-shrink: 0;
+}
+
+/* EXPLORE BUTTON */
+
+.explore-button {
+    position: absolute;
+    right: 40px;
+    bottom: 35px;
+
+    font-size: 16px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 5px;
+}
+
+.explore-button:hover {
+    opacity: 0.5;
+}
+
+/* ========================================
+   SELECTED WORKS
+======================================== */
+
+.works-section {
+    padding: 80px 5%;
+    scroll-margin-top: 80px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading p,
+.section-label {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.section-heading h2,
+.page-title {
+    font-family: "Rubik 80s Fade", system-ui;
+    font-size: clamp(38px, 5vw, 75px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* ========================================
+   TWO-COLUMN PROJECT GRID
+======================================== */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+}
+
+.project,
+.project.reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    min-width: 0;
+}
+
+/* PROJECT PREVIEW DIMENSIONS */
+
+.project-image,
+.collage-carousel,
+.album-preview {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+/* ========================================
+   PROJECT DESCRIPTIONS
+======================================== */
 
 .description {
-    width: 45%;
-
-    border: 4px solid black;
-    border-radius: 20px;
-
-    padding: 25px;
+    width: 100%;
+    min-width: 0;
 }
 
-.reverse {
-    flex-direction: row-reverse;
-}
-
-.monogram-project {
-    text-align: left;
-}
-
-.monogram-project h2 {
-    font-family: "Barriecito", system-ui;
-    font-size: 35px;
-    font-weight: 400;
+.project-number {
+    display: block;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 
-.Monogram {
-     width: 100px;
-     max-width: 100%;
+/* SHARE TECH MONO PROJECT TITLES */
+
+.description h3 {
+    font-family: "Share Tech Mono", monospace;
+    font-size: clamp(32px, 3.5vw, 52px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 10px;
 }
 
-.Headshot {
-     width: 400px;
-     max-width: 100%;
-     border: 4px solid black;
-     border-radius: 20px;
+.description h3 a {
+    color: inherit;
+    text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
-
+.description h3 a:hover {
+    opacity: 0.6;
 }
+
+.description p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+.case-study-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding-bottom: 6px;
+
+    font-size: 14px;
+    border-bottom: 1px solid #111;
+}
+
+.case-study-link:hover {
+    opacity: 0.5;
+}
+
+/* ========================================
+   PERSONAL MONOGRAM PREVIEW
+======================================== */
+
+.project-image.monogram-preview {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 0;
+    padding: 35px;
+
+    background-color: #dedbd5;
+
+    overflow: hidden;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.mockup-card {
+    position: relative;
+
+    width: 75%;
+    max-width: 330px;
+    aspect-ratio: 1.45;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #faf9f5;
+
+    box-shadow:
+        10px 15px 25px rgba(0,0,0,0.18),
+        2px 3px 5px rgba(0,0,0,0.08);
+
+    transform: rotate(-7deg) rotateY(-8deg);
+    transition: transform 0.5s ease;
+}
+
+.mockup-card img {
+    width: 42%;
+    height: 65%;
+    object-fit: contain;
+    padding: 0;
+}
+
+.monogram-preview:hover .mockup-card {
+    transform: rotate(0deg) rotateY(0deg) scale(1.04);
+}
+
+/* ========================================
+   CASE STUDY HOVER OVERLAY
+======================================== */
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.45);
+    color: white;
+
+    font-family: "Share Tech Mono", monospace;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.monogram-preview:hover .image-overlay,
+.monogram-preview:focus-visible .image-overlay,
+.album-preview:hover .image-overlay,
+.album-preview:focus-visible .image-overlay {
+    opacity: 1;
+}
+
+/* ========================================
+   ALBUM COVER PROJECT PREVIEW
+======================================== */
+
+.album-preview {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    background-color: #dedbd5;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* OVERLAPPING ALBUM COVERS */
+
+.album-gallery {
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.4s ease;
+}
+
+.album-gallery img {
+    position: absolute;
+
+    width: 45%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    /* NO BORDERS OR SHADOWS */
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+
+    transition: transform 0.4s ease;
+}
+
+/* INDIVIDUAL ALBUM POSITIONS */
+
+.album-gallery img:nth-child(1) {
+    transform: translate(-70%, -35%) rotate(-15deg);
+    z-index: 1;
+}
+
+.album-gallery img:nth-child(2) {
+    transform: translate(60%, -40%) rotate(12deg);
+    z-index: 2;
+}
+
+.album-gallery img:nth-child(3) {
+    transform: translate(-50%, 55%) rotate(8deg);
+    z-index: 3;
+}
+
+.album-gallery img:nth-child(4) {
+    transform: translate(60%, 50%) rotate(-10deg);
+    z-index: 4;
+}
+
+.album-gallery img:nth-child(5) {
+    transform: translate(0%, 0%) rotate(0deg);
+    z-index: 5;
+}
+
+/* ALBUM HOVER EFFECT */
+
+.album-preview:hover .album-gallery {
+    transform: scale(1.04);
+}
+
+/* ========================================
+   DIGITAL COLLAGE CAROUSEL
+   (KEPT FOR COMPATIBILITY)
+======================================== */
+
+.collage-carousel {
+    display: flex;
+    gap: 15px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    padding: 20px;
+    background-color: #dedbd5;
+    align-items: center;
+}
+
+.collage-carousel img {
+    width: 100%;
+    height: 100%;
+
+    flex-shrink: 0;
+    object-fit: contain;
+
+    scroll-snap-align: start;
+}
+
+/* ========================================
+   ABOUT + CONTACT PAGE
+======================================== */
+
+.about-page {
+    padding: 150px 5% 100px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+    padding-bottom: 120px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+/* SHARE TECH MONO ABOUT HEADING */
+
+.about-text h2 {
+    font-family: "Share Tech Mono", monospace;
+    font-size: clamp(40px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.headshot {
+    width: 40%;
+    max-width: 450px;
+    object-fit: cover;
+}
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-section {
+    border-top: 1px solid #111;
+    padding-top: 80px;
+    scroll-margin-top: 100px;
+}
+
+.contact-section h2 {
+    font-family: "Rubik 80s Fade", system-ui;
+    font-size: clamp(65px, 10vw, 140px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 20px 0 30px;
+}
+
+.contact-section > p:not(.section-label) {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* SHARE TECH MONO EMAIL */
+
+.contact-email {
+    display: inline-block;
+    margin-top: 35px;
+
+    font-family: "Share Tech Mono", monospace;
+    font-size: clamp(35px, 5vw, 65px);
+
+    border-bottom: 1px solid #111;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   CASE STUDY PAGES
+   MONOGRAM + ALBUMS
+======================================== */
+
+.case-study-page {
+    padding: 150px 5% 100px;
+}
+
+.case-study-header {
+    margin-bottom: 70px;
+}
+
+.case-study-header h1 {
+    font-family: "Rubik 80s Fade", system-ui;
+    font-size: clamp(48px, 9vw, 130px);
+    font-weight: 400;
+    line-height: 1.1;
+
+    margin: 0 0 30px;
+}
+
+.case-study-intro {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   MONOGRAM CASE STUDY MOCKUP
+======================================== */
+
+.case-study-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 600px;
+    padding: 80px 30px;
+
+    background-color: #dedbd5;
+    perspective: 1200px;
+}
+
+.case-study-card {
+    width: min(70%, 650px);
+    aspect-ratio: 1.45;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #faf9f5;
+
+    box-shadow: 18px 25px 35px rgba(0,0,0,0.18);
+
+    transform: rotate(-5deg) rotateY(-8deg);
+}
+
+.case-study-card img {
+    width: 45%;
+    height: 70%;
+    object-fit: contain;
+}
+
+/* ========================================
+   ALBUM COVER CASE STUDY GALLERY
+======================================== */
+
+.album-hero {
+    width: 100%;
+    padding: 60px;
+
+    background-color: #dedbd5;
+}
+
+.album-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.album-hero-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border: none;
+    box-shadow: none;
+}
+
+/* ========================================
+   CASE STUDY INFORMATION
+======================================== */
+
+.case-study-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+
+    padding: 110px 0;
+}
+
+.case-study-sidebar p {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.case-study-sidebar h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 35px;
+}
+
+.case-study-text section {
+    margin-bottom: 70px;
+}
+
+/* SHARE TECH MONO SECTION HEADINGS */
+
+.case-study-text h2 {
+    font-family: "Share Tech Mono", monospace;
+    font-size: clamp(38px, 4vw, 60px);
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.case-study-text p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.back-to-work {
+    display: inline-block;
+    padding-bottom: 8px;
+
+    font-size: 15px;
+    border-bottom: 1px solid #111;
+}
+
+.back-to-work:hover {
+    opacity: 0.5;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 30px 5%;
+    border-top: 1px solid #111;
+}
+
+footer p,
+footer a {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ========================================
+   TABLET
+======================================== */
 
 @media (max-width: 900px) {
-    #title {
-        font-size: 120px;
+
+    .site-nav {
+        padding: 0 25px;
     }
 
-    .name {
-        top: 10px;
-        left: 160px;
-        font-size: 22px;
+    .nav-links {
+        gap: 20px;
     }
 
-    .Flower {
-        width: 80%;
-        top: 170px;
-        left: 50%;
-        transform: translateX(-50%);
+    .projects {
+        gap: 25px;
     }
 
     .about-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        gap: 35px;
     }
 
-    .about-container p {
-        width: 100%;
-        text-align: center;
+    .case-study-content {
+        gap: 50px;
     }
 
-    .about-text {
-        text-align: center;
+    .album-hero {
+        padding: 35px;
     }
 
-    .Headshot {
-        max-width: 100%;
-        width: 320px;
+    .album-hero-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* NAVIGATION */
+
+    .site-nav {
+        height: 70px;
+        padding: 0 18px;
     }
 
-    .project {
+    .nav-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    /* HERO */
+
+    .hero-intro {
+        top: 105px;
+        left: 18px;
+        right: 18px;
+        font-size: 13px;
+    }
+
+    .hero-title {
+        font-size: 8vw;
+        padding: 0 3vw;
+    }
+
+    .explore-button {
+        right: 18px;
+        bottom: 25px;
+        font-size: 14px;
+    }
+
+    /* SELECTED WORKS */
+
+    .works-section {
+        padding: 65px 18px;
+        scroll-margin-top: 70px;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .works-section .section-heading h2 {
+        font-size: 10vw;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+
+    .project,
+    .project.reverse {
         flex-direction: column;
         gap: 20px;
     }
 
     .project-image,
-    .description {
+    .collage-carousel,
+    .album-preview {
         width: 100%;
+        aspect-ratio: 4 / 3;
     }
 
-    .reverse {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        overflow-x: hidden;
+    .project-image.monogram-preview {
+        min-height: 0;
+        padding: 25px;
     }
 
-    .portfolio-title {
-        position: relative;
-        margin-top: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .mockup-card {
+        width: 85%;
     }
 
-    #title {
-        font-size: 44px;
-        line-height: 0.95;
-        letter-spacing: 3px;
-        word-break: normal;
-        text-align: center;
+    .description h3 {
+        font-size: 42px;
     }
 
-    .name {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        font-size: 16px;
-        white-space: nowrap;
-        text-align: center;
+    .description p {
+        font-size: 15px;
     }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
+    /* ALBUM PREVIEW */
+
+    .album-preview {
+        padding: 20px;
     }
 
-    .Flower {
-        width: 95%;
-        top: 90px;
-        left: calc(50% + 20px);
-        transform: translateX(-50%);
+    .album-gallery img {
+        width: 42%;
     }
 
-    .projects {
-        margin: 20px;
-    }
+    /* ABOUT */
 
-    .project {
-        margin-bottom: 40px;
-    }
-
-    .description {
-        padding: 16px;
-    }
-
-    .page-title {
-        font-size: 50px;
+    .about-page {
+        padding: 110px 18px 70px;
     }
 
     .about-container {
-        margin: 20px;
-        gap: 20px;
-    }
-
-    .about-container p {
-        text-align: center;
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 80px;
     }
 
     .about-text {
-        text-align: center;
+        width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .headshot {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+        padding-top: 60px;
+    }
+
+    .contact-email {
+        font-size: clamp(24px, 7vw, 40px);
+    }
+
+    /* CASE STUDIES */
+
+    .case-study-page {
+        padding: 110px 18px 70px;
+    }
+
+    .case-study-header {
+        margin-bottom: 40px;
+    }
+
+    .case-study-visual {
+        min-height: 350px;
+        padding: 35px 20px;
+    }
+
+    .case-study-card {
+        width: 90%;
+    }
+
+    .case-study-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 70px 0;
+    }
+
+    .case-study-text section {
+        margin-bottom: 50px;
+    }
+
+    .case-study-text p {
+        font-size: 16px;
+    }
+
+    /* ALBUM CASE STUDY */
+
+    .album-hero {
+        padding: 20px;
+    }
+
+    .album-hero-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 18px;
+    }
+
+    footer p,
+    footer a {
+        font-size: 12px;
     }
 }
 
-.home-button,
-.linkedin-button {
-    display: inline-block;
-    width: fit-content;
+/* ========================================
+   REDUCED MOTION
+======================================== */
 
-    font-family: "Barriecito", system-ui;
-    font-size: 20px;
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-title .letter,
+    .mockup-card,
+    .album-gallery,
+    .nav-logo img {
+        transition: none;
+    }
+}
+
+
+
+/* ========================================
+   CONTACT SOCIAL BUTTONS
+======================================== */
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+    padding: 18px 30px;
+
+    background-color: transparent;
+    color: #111;
+    border: 1px solid #111;
+
+    font-family: "Share Tech Mono", monospace;
+    font-size: 18px;
     font-weight: 400;
-    font-style: normal;
-
-    color: black;
-
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 50px;
+    letter-spacing: 1px;
 
     text-decoration: none;
-    text-align: center;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
 
+/* HOVER EFFECT */
+
+.contact-button:hover {
+    background-color: #111;
+    color: #f4f1ec;
+    transform: translateY(-3px);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.contact-button:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 4px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .contact-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact-button {
+        width: 100%;
+        min-width: 0;
+        padding: 16px 24px;
+        font-size: 17px;
+    }
+}
+
+
+
+/* ========================================
+   PICTOGRAM + BOOK JACKET PREVIEWS
+======================================== */
+
+.new-project-preview {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    background-color: #dedbd5;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.home-button-container {
-    text-align: center;
-}
-
-.linkedin-button {
-    margin-top: 10px;
-}
-
-.contact-container {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 700px;
-}
-
-.contact-container h2,
-.contact-container p,
-.contact-container a {
-    display: block;
-    margin: 12px auto;
-}
-
-.about-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 40px;
-    gap: 50px;
-}
-
-.about-container p {
-    width: 50%;
-    text-align: left;
-}
-
-.about-text {
-    text-align: left;
-}
-
-.Headshot {
-    width: 400px;
-    max-width: 40%;
-    height: auto;
-}
-
-
-.carousel {
-    display: flex;
-
-    width: 400px;
-    max-width: 100%;
-
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
-
-.carousel img {
+.new-project-preview > img {
     width: 100%;
-    flex: 0 0 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
 
-    scroll-snap-align: center;
+    border: none;
+    box-shadow: none;
+
+    transition: transform 0.4s ease;
+}
+
+.new-project-preview:hover > img {
+    transform: scale(1.04);
+}
+
+.new-project-preview:hover .image-overlay,
+.new-project-preview:focus-visible .image-overlay {
+    opacity: 1;
+}
+
+/* ========================================
+   PICTOGRAM + BOOK CASE STUDY IMAGES
+======================================== */
+
+.new-case-study-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 500px;
+    padding: 60px;
+
+    background-color: #dedbd5;
+}
+
+.new-case-study-visual img {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    max-height: 750px;
+
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .new-case-study-visual {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .new-case-study-visual img {
+        max-height: 450px;
+    }
 }

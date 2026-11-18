@@ -1,40 +1,271 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia Pearson's Portfolio</title>
-    
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Molle:ital@1&family=Rubik+Distressed&family=Rubik+Vinyl&family=Snowburst+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-    
+    <title>Olivia Pearson | Portfolio</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- INTERACTIVE TYPOGRAPHY -->
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-     
-     <div class="title-area">
 
-<div class="portfolio-title">
-    <p class="name">Olivia Pearson's</p>
-    <h1 id="title">Portfolio</h1>
+    <!-- UNIVERSAL NAVIGATION -->
+    <nav class="site-nav" aria-label="Main navigation">
 
-</div>
-    <nav>
-        <a href="aboutme.html">About me</a>
-        <a href="works.html">Works</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="nav-logo">
+            <img src="ORPmonogram.png"
+                 alt="Olivia Pearson monogram">
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="#selected-works">WORK</a>
+            <a href="aboutme.html">ABOUT + CONTACT</a>
+        </div>
+
     </nav>
 
-</div>
-        
-      <img src="PortfolioFlower.png" class="Flower">
+    <!-- HERO SECTION -->
+    <header class="hero">
+
+        <p class="hero-intro">
+            Explore my portfolio<br>
+            and design work below!
+        </p>
+
+        <div class="hero-center">
+
+            <h1 class="hero-title"
+                id="interactive-name"
+                aria-label="Olivia Pearson">
+                Olivia Pearson
+            </h1>
+
+        </div>
+
+        <a href="#selected-works" class="explore-button">
+            EXPLORE ↓
+        </a>
+
+    </header>
+
+    <!-- SELECTED WORKS -->
+    <main id="selected-works" class="works-section">
+
+        <div class="section-heading">
+            <h2>SELECTED WORKS</h2>
+        </div>
+
+        <!-- ALL FOUR PROJECTS INSIDE GRID -->
+        <div class="projects">
+
+            <!-- PROJECT 01: PERSONAL MONOGRAM -->
+            <article class="project">
+
+                <a href="monogram.html"
+                   class="project-image monogram-preview"
+                   aria-label="View Personal Monogram case study">
+
+                    <div class="mockup-card">
+                        <img src="ORPmonogram.png"
+                             alt="ORP personal monogram">
+                    </div>
+
+                    <span class="image-overlay">
+                        VIEW CASE STUDY
+                    </span>
+
+                </a>
+
+                <div class="description">
+
+                    <span class="project-number">
+                        01 / VISUAL IDENTITY
+                    </span>
+
+                    <h3>
+                        <a href="monogram.html">
+                            Personal Monogram
+                        </a>
+                    </h3>
+
+                    <p>
+                        A personal visual identity developed
+                        through typography, letterforms,
+                        and composition.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <!-- PROJECT 02: ALBUM COVER DESIGNS -->
+            <article class="project">
+
+                <a href="Albums.html"
+                   class="album-preview"
+                   aria-label="View Album Cover Designs case study">
+
+                    <div class="album-gallery">
+
+                        <img src="BOOM.jpg"
+                             alt="Boom album cover">
+
+                        <img src="Crack.jpg"
+                             alt="Crack album cover">
+
+                        <img src="Gurgle.jpg"
+                             alt="Gurgle album cover">
+
+                        <img src="Murmur.jpg"
+                             alt="Murmur album cover">
+
+                        <img src="Rattle.jpg"
+                             alt="Rattle album cover">
+
+                    </div>
+
+                    <span class="image-overlay">
+                        VIEW CASE STUDY
+                    </span>
+
+                </a>
+
+                <div class="description">
+
+                    <span class="project-number">
+                        02 / ALBUM ARTWORK
+                    </span>
+
+                    <h3>
+                        <a href="Albums.html">
+                            Album Cover Designs
+                        </a>
+                    </h3>
+
+                    <p>
+                        A collection of experimental album covers
+                        exploring the relationship between sound,
+                        typography, and visual composition.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <!-- PROJECT 03: PICTOGRAM DESIGN -->
+            <article class="project">
+
+                <a href="Pictogram.html"
+                   class="project-image new-project-preview"
+                   aria-label="View Pictogram Design case study">
+
+                    <img src="Picogram.png"
+                         alt="Pictogram design project">
+
+                    <span class="image-overlay">
+                        VIEW CASE STUDY
+                    </span>
+
+                </a>
+
+                <div class="description">
+
+                    <span class="project-number">
+                        03 / ICONOGRAPHY
+                    </span>
+
+                    <h3>
+                        <a href="Pictogram.html">
+                            Pictogram Design
+                        </a>
+                    </h3>
+
+                    <p>
+                        An exploration of visual communication
+                        through simplified shapes, symbols,
+                        and graphic systems.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <!-- PROJECT 04: BOOK JACKET DESIGN -->
+            <article class="project">
+
+                <a href="Book.html"
+                   class="project-image new-project-preview"
+                   aria-label="View Book Jacket Design case study">
+
+                    <img src="goldframe.png"
+                         alt="Book jacket design project">
+
+                    <span class="image-overlay">
+                        VIEW CASE STUDY
+                    </span>
+
+                </a>
+
+                <div class="description">
+
+                    <span class="project-number">
+                        04 / PUBLICATION DESIGN
+                    </span>
+
+                    <h3>
+                        <a href="Book.html">
+                            Book Jacket Design
+                        </a>
+                    </h3>
+
+                    <p>
+                        An exploration of visual storytelling
+                        through typography, imagery, and
+                        editorial composition.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+        <!-- END PROJECT GRID -->
+
+    </main>
+    <!-- END SELECTED WORKS -->
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>OLIVIA PEARSON © 2026</p>
+
+        <a href="aboutme.html">
+            ABOUT + CONTACT →
+        </a>
+
+    </footer>
 
 </body>
 </html>
-
-
